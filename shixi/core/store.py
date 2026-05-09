@@ -23,6 +23,7 @@ def sales_to_df(sales: List[DishSale]) -> pd.DataFrame:
         records.append({
             '营业日期': s.营业日期,
             '订单编号': s.订单编号,
+            '取餐号': s.取餐号,
             '菜品名称': s.菜品名称,
             '菜品大类': s.菜品大类,
             '菜品小类': s.菜品小类,
@@ -48,6 +49,7 @@ def df_to_sales(df: pd.DataFrame) -> List[DishSale]:
         sales.append(DishSale(
             营业日期=row['营业日期'].date() if hasattr(row['营业日期'], 'date') else row['营业日期'],
             订单编号=str(row['订单编号']),
+            取餐号=str(row.get('取餐号', '')),
             菜品名称=str(row['菜品名称']),
             菜品大类=str(row['菜品大类']),
             菜品小类=str(row['菜品小类']),

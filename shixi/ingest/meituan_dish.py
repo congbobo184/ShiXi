@@ -10,6 +10,7 @@ from shixi.core.schema import DishSale
 COLUMN_MAP = {
     '营业日期': '营业日期',
     '订单编号': '订单编号',
+    '取餐号': '取餐号',
     '菜品名称': '菜品名称',
     '菜品大类': '菜品大类',
     '菜品小类': '菜品小类',
@@ -60,6 +61,7 @@ def parse(filepath: str) -> List[DishSale]:
             sale = DishSale(
                 营业日期=row['营业日期'].date() if pd.notna(row['营业日期']) else None,
                 订单编号=str(row.get('订单编号', '')),
+                取餐号=str(row.get('取餐号', '')).rstrip('.0'),
                 菜品名称=str(row.get('菜品名称', '')),
                 菜品大类=str(row.get('菜品大类', '')),
                 菜品小类=str(row.get('菜品小类', '')),

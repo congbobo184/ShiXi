@@ -10,20 +10,26 @@ class DishSale:
     """一条菜品销售记录"""
     营业日期: date
     订单编号: str
-    菜品名称: str
-    菜品大类: str
-    菜品小类: str
-    销售数量: float
-    销售额: float
-    菜品优惠: float
-    菜品收入: float
-    点菜时间: Optional[datetime]
-    下单时间: Optional[datetime]
-    订单金额: float
-    订单优惠: float
-    订单收入: float
+    取餐号: str = ""
+    菜品名称: str = ""
+    菜品大类: str = ""
+    菜品小类: str = ""
+    销售数量: float = 0.0
+    销售额: float = 0.0
+    菜品优惠: float = 0.0
+    菜品收入: float = 0.0
+    点菜时间: Optional[datetime] = None
+    下单时间: Optional[datetime] = None
+    订单金额: float = 0.0
+    订单优惠: float = 0.0
+    订单收入: float = 0.0
     规格: str = ""
     单位: str = ""
+
+    @property
+    def real_order_id(self) -> str:
+        """真正的订单标识 = 日期 + 取餐号（美团按天重置取餐号）"""
+        return f"{self.营业日期}_{self.取餐号}"
 
 
 @dataclass

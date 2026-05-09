@@ -18,7 +18,7 @@ def generate(sales: List[DishSale], store_config: dict) -> str:
     dates = [s.营业日期 for s in sales if s.营业日期]
     date_from = min(dates) if dates else date.today()
     date_to = max(dates) if dates else date.today()
-    total_orders = len(set(s.订单编号 for s in sales))
+    total_orders = len(set(s.real_order_id for s in sales))
 
     # 收集所有分析结果
     all_findings: List[Finding] = []
