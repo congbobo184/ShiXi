@@ -1,0 +1,21 @@
+[project]
+name = "shixi"
+version = "0.1.0"
+description = "石溪 - 餐饮经营智能分析系统"
+requires-python = ">=3.11"
+dependencies = [
+    "pandas>=2.0",
+    "openpyxl>=3.1",
+    "pyyaml>=6.0",
+    "plotly>=5.18",
+]
+
+[project.scripts]
+shixi = "shixi.cli:main"
+
+[build-system]
+requires = ["setuptools>=68"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools.packages.find]
+include = ["shixi*"]

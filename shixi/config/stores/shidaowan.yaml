@@ -1,0 +1,37 @@
+name: 小谷姐姐麻辣烫·石岛湾店
+brand: 小谷姐姐
+profile: malatang
+
+location:
+  type: coastal_tourist
+  city: 威海市
+  district: 荣成市
+  subdistrict: 桃源街道
+  address: 东山南路2号C114商业
+  lat: 36.88
+  lng: 122.45
+
+environment:
+  nearby_residential:
+    - 桃源街道居民区（周边多个小区）
+    - 石岛湾花园
+  nearby_attractions:
+    - 石岛湾海水浴场（约1km）
+    - 赤山风景区（约5km）
+    - 石岛港
+  nearby_commercial:
+    - 东山南路沿街商铺
+    - 石岛商业街
+  nearby_transport:
+    - 东山南路（主干道）
+  nearby_schools: []
+
+local_context:
+  tourist_season_months: [5, 6, 7, 8, 9, 10]
+  peak_months: [7, 8]
+  notes: |
+    位于荣成石岛湾核心区域，东山南路沿街商铺。
+    石岛湾是威海重要的滨海旅游目的地，暑期游客密集。
+    周边以居民区和沿街商业为主，距海水浴场约1公里。
+    荣成本地饮食偏海鲜、咸鲜口味，麻辣烫作为差异化品类有优势。
+    东山南路为区域主干道，人流车流有一定保障。
